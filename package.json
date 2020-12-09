@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "youtube website",
   "main": "index.js",
-  "homepage": "https://mrrobothasan.github.io/",
+  "homepage": "https://mrrobothasan.github.io/youtube-clone",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d dist"
   },
   "author": "Majd",
