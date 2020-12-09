@@ -1,0 +1,60 @@
+// variables
+$black: #000;
+$white: #fff;
+$primaryColor: #f9f9f9;
+$iconsColor: #606060;
+$foucsColor: rgb(96, 96, 96);
+$widthVidIconContent: 95px;
+
+@mixin flexCenter($dir) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $dir;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $black;
+}
+.flex {
+  display: flex;
+}
+.center-hor {
+  justify-content: center;
+}
+.center-ver {
+  align-items: center;
+}
+.grid {
+  display: grid;
+}
+.grid-center {
+  place-items: center;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.no-outline {
+  outline: $white;
+}

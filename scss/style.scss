@@ -1,0 +1,191 @@
+@import "config";
+@import "header";
+@import "leftNav";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", cursive;
+}
+.body-cont {
+  justify-content: space-between;
+  .main-cont {
+    width: 87.5%;
+    background-color: $primaryColor;
+    margin: 0 0 0 240px;
+    .main-content {
+      width: 90%;
+      margin: auto;
+      margin-top: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .main-content-vid {
+      width: calc(100% / 4 - 16px - 0.01px);
+      margin: 0 8px 40px 8px;
+    }
+    .vid-container {
+      flex-direction: column;
+      width: 100%;
+      &:hover .more-vid-icon {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      &:hover .thumbnail .vid-hover {
+        display: flex;
+      }
+      .thumbnail-img {
+        width: 100%;
+        height: 200px;
+        object-fit: fill;
+      }
+      .more-vid-icon {
+        opacity: 0;
+        pointer-events: none;
+        top: 10px;
+        right: 0;
+        cursor: pointer;
+        color: #a1a1a1;
+        &::selection {
+          display: none;
+        }
+        &:hover {
+          color: #585858;
+        }
+      }
+      .vid-details {
+        flex-direction: column;
+        padding: 0 24px 0 0;
+        .vid-title {
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 1.5rem;
+          max-height: 4rem;
+          margin: 10px 0 4px 0;
+        }
+        .vid-views,
+        .vid-channel-name {
+          font-size: 14px;
+          color: #606060;
+        }
+      }
+      .thumbnail {
+        position: relative;
+        .vid-hover {
+          top: 0;
+          right: 0;
+          margin: 5px;
+          flex-direction: column;
+          gap: 5px;
+          display: none;
+          .icon-vid-container {
+            @include flexCenter(row);
+            width: 28px;
+            height: 28px;
+            background-color: #1f1e1e;
+            border-radius: 2px;
+            position: relative;
+            .icon-vid-content {
+              @include flexCenter(row);
+              top: 0;
+              width: 0;
+              left: -70px;
+              height: 100%;
+              font-size: 0.75rem;
+              font-weight: 500;
+              text-transform: uppercase;
+              color: #fff;
+              background-color: #1f1e1e;
+              opacity: 0;
+            }
+            &:hover .icon-vid-content {
+              width: $widthVidIconContent;
+              left: -$widthVidIconContent;
+              opacity: 1;
+              transition: 0.4s ease;
+              transition-property: opacity, left;
+            }
+            .icon-vid {
+              z-index: 1;
+              width: 23px;
+            }
+          }
+        }
+
+        .timestamp {
+          bottom: 0px;
+          right: 0px;
+          margin: 8px 4px;
+          color: #fff;
+          font-size: 0.8rem;
+          background-color: #1f1e1e;
+          padding: 1px 4px;
+          border-radius: 2px;
+        }
+      }
+      .thumbnail-icon {
+        margin: 12px 12px 0 0;
+        .channel-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.vid-more {
+  flex-direction: column;
+  top: 35px;
+  right: -210px;
+  width: 200px;
+  border-radius: 4px;
+  min-width: 240px;
+  max-width: 303.969px;
+  background-color: #fffffffa;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  .vid-more-second {
+    border-top: 1px solid #e5e5e5;
+  }
+  ul {
+    padding: 8px 0;
+  }
+  a {
+    padding: 6px 16px;
+    align-items: center;
+    font-size: 14px;
+    color: #030303;
+    &:hover {
+      background-color: #0000001a;
+    }
+    .more-icon-svg {
+      width: 23px;
+      margin: 0 15px 0 0;
+      .more-icon-svg-path {
+        fill: #868686;
+      }
+    }
+  }
+}
+.open {
+  display: flex;
+}
+.close {
+  display: none;
+}
+.channel-icon,
+.thumbnail-img {
+  background-color: #aaa;
+}
+.main-cont.extra-margin-main {
+  margin: 0 0 0 10px;
+  width: 100%;
+  .main-content {
+    width: 95%;
+    margin: 24px 0 0 75px;
+    .main-content-vid {
+      width: calc(100% / 5 - 16px - 0.01px);
+    }
+  }
+}

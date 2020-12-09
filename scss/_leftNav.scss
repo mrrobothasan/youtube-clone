@@ -1,0 +1,143 @@
+.icon-svg,
+.icon-svg-nav {
+  path,
+  circle {
+    fill: $iconsColor;
+  }
+}
+.icon-svg-nav {
+  width: 23px;
+}
+.icon-svg-nav,
+.icon {
+  color: $iconsColor;
+  font-size: 20px;
+  margin: 0 24px 0 0;
+}
+.left-nav-links {
+  border-bottom: 1px solid #0000001a;
+  padding: 12px 0;
+  li {
+    &:hover {
+      background-color: #f3f2f2;
+    }
+    .active {
+      background-color: #e5e5e5;
+      .icon {
+        color: red;
+      }
+      .left-nav-txt {
+        font-weight: 500;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 9px 24px;
+      span.icon {
+        font-size: 22px;
+      }
+      span.thumb-up-icon {
+        font-size: 18px;
+        margin: 0 28px 0 0;
+      }
+      .left-nav-txt {
+        color: #1f1e1e;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.left-nav-title {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 9px 24px 9px 28px;
+  color: #666565;
+}
+
+.left-nav {
+  width: 240px;
+  position: fixed;
+  top: 50px;
+  background-color: $white;
+  overflow-y: hidden;
+  height: 95%;
+  &:hover {
+    overflow-y: auto;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #cfcfcf;
+  }
+  .footer-links {
+    div {
+      padding: 16px 24px;
+      color: #909090;
+      font-size: 13px;
+    }
+    ul {
+      padding: 16px 24px 0;
+      li {
+        display: inline-block;
+      }
+      a {
+        color: #606060;
+        white-space: nowrap;
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1rem;
+      }
+    }
+  }
+}
+
+.hide-nav {
+  display: none;
+}
+.left-nav-mini {
+  background-color: $white;
+  position: fixed;
+  height: 100vh;
+  display: none;
+  ul {
+    flex-direction: column;
+    width: 72px;
+
+    li {
+      display: grid;
+      &:nth-child(2) .icon-nav-mini,
+      &:nth-child(3) .icon-nav-mini {
+        font-size: 21px;
+      }
+      a {
+        @include flexCenter(column);
+        padding: 16px 0 14px;
+        &:hover {
+          background-color: #f3f2f2;
+        }
+        span:last-child {
+          font-size: 10px;
+        }
+        .icon-nav-mini {
+          margin: 0 0 6px 0;
+        }
+      }
+    }
+  }
+}
+.active-mini-link {
+  span {
+    color: #c00;
+  }
+  span.icon-nav-mini {
+    color: #f00;
+  }
+}
+.show-mini-nav {
+  display: block;
+}

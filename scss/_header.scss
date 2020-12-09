@@ -1,0 +1,88 @@
+header {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  z-index: 2000;
+  .nav-logo {
+    gap: 1rem;
+    .burger-btn {
+      border-radius: 50px;
+      .burger {
+        padding: 8px;
+        flex-direction: column;
+        cursor: pointer;
+        div {
+          width: 18px;
+          height: 2px;
+          background-color: $iconsColor;
+        }
+        div:nth-child(2) {
+          margin: 3px 0;
+        }
+      }
+    }
+    .yt-logo {
+      width: 80px;
+    }
+  }
+  .header-icons {
+    padding: 0 10px 0 0;
+    li {
+      @include flexCenter(row);
+      cursor: pointer;
+      margin: 0 12px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      .header-icon-btn {
+        width: 24px;
+      }
+    }
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50px;
+    }
+  }
+  .search-input {
+    flex: 0 1 728px;
+    height: 32px;
+    margin: 0 0 0 60px;
+    input {
+      width: 80%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-right: 0;
+      border-radius: 2px 0 0 2px;
+      box-shadow: inset 0 1px 2px #eee;
+      outline: $white;
+      &:focus {
+        border: 1px solid #1c62b9;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+    }
+    button {
+      width: 9%;
+      border-radius: 0 2px 2px 0;
+      border: 1px solid #d3d3d3;
+      background-color: #f8f8f8;
+      outline: $white;
+      &:hover {
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        background-color: #f0f0f0;
+        border: 1px solid #c6c6c6;
+      }
+      @include flexCenter(row);
+      svg {
+        width: 20px;
+        path {
+          fill: $iconsColor;
+        }
+      }
+    }
+  }
+}
